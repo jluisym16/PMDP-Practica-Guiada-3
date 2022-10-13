@@ -34,7 +34,7 @@ public class NombresAdapter extends RecyclerView.Adapter<NombresAdapter.Holder> 
     @NonNull
     @Override
     public NombresAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.fila, parent, false));
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.fila, parent, false);
         return new Holder(v);
     }
 
