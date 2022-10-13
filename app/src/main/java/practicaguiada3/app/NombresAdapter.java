@@ -46,6 +46,6 @@ public class NombresAdapter extends RecyclerView.Adapter<NombresAdapter.Holder> 
 
     @Override
     public int getItemCount() {
-        return 0;
+        return nombres.size();
     }
 }
