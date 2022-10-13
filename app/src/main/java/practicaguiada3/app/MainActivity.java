@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(this));
         List<String> l = Arrays.asList("Gustavo", "Daniel");
-        RecyclerView.Adapter adapter = new NombresAdapter(l);
+        RecyclerView.Adapter adapter = new CentroAdapter(l);
         rv.setAdapter(adapter);
     }
 }

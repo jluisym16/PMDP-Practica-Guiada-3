@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class NombresAdapter extends RecyclerView.Adapter<NombresAdapter.Holder> {
+public class CentroAdapter extends RecyclerView.Adapter<CentroAdapter.Holder> {
     static class Holder extends RecyclerView.ViewHolder{
         final TextView nombre;
         public Holder(View itemView){
@@ -27,19 +27,19 @@ public class NombresAdapter extends RecyclerView.Adapter<NombresAdapter.Holder> 
     }
     List<String> nombres;
 
-    public NombresAdapter(List<String> nombres) {
+    public CentroAdapter(List<String> nombres) {
         this.nombres = nombres;
     }
 
     @NonNull
     @Override
-    public NombresAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CentroAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.fila, parent, false);
         return new Holder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NombresAdapter.Holder holder, int position) {
+    public void onBindViewHolder(@NonNull CentroAdapter.Holder holder, int position) {
     //va a ser encargado de pasarle al holder correspondiente el dato que esté en una posición concreta
         holder.nombre.setText(nombres.get(position));
     }
