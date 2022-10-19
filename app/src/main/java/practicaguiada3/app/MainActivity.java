@@ -16,7 +16,11 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView rv = findViewById(R.id.recyclerView);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        List<String> l = Arrays.asList("Gustavo", "Daniel");
+        List<Centro> l = Arrays.asList(
+                new Centro ("IES Doctor Fleming", "Doctor Fleming 7, Oviedo", R.mipmap.ic_launcher),
+                new Centro ("IES Monte Naranco", "Calle de Oviedo", R.mipmap.ic_launcher),
+                new Centro ("CIFP Avilés", "Calle en Avilés", R.mipmap.ic_launcher)
+        );
         RecyclerView.Adapter adapter = new CentroAdapter(l);
         rv.setAdapter(adapter);
     }
