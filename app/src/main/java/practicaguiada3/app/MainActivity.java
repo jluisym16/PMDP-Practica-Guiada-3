@@ -29,6 +29,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rv.setOnClickListener(this);
     }
     public void onClick(View v){
-        Toast.makeText(this, "Centro", Toast.LENGTH_SHORT);
+        Toast.makeText(this, "Centro", Toast.LENGTH_SHORT).show();
     }
 }
