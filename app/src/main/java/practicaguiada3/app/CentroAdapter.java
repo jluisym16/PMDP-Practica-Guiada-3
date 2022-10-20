@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,9 +32,11 @@ public class CentroAdapter extends RecyclerView.Adapter<CentroAdapter.ViewHolder
 
         ViewHolder(View v){
             super(v);
+
             nombre=v.findViewById(R.id.nombre);
             direccion=v.findViewById(R.id.direccion);
             imagen=v.findViewById(R.id.imagen);
+            v.setOnClickListener((vista)-> Toast.makeText(vista.getContext(), nombre.getText(), Toast.LENGTH_SHORT).show());
         }
         void bind(Centro centro){
             nombre.setText(centro.getNombre());

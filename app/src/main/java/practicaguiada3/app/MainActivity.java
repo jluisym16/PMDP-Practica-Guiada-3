@@ -1,16 +1,19 @@
 package practicaguiada3.app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +29,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         );
         RecyclerView.Adapter adapter = new CentroAdapter(l);
         rv.setAdapter(adapter);
-        rv.setOnClickListener(this);
-    }
-    public void onClick(View v){
-        Toast.makeText(this, "Centro", Toast.LENGTH_SHORT).show();
-    }
+   }
+
 }
